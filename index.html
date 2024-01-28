@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Theodor Hägg - Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="./img/svg/favicon.svg" />
+    <script
+      src="https://kit.fontawesome.com/8409a19dba.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" type="text/css" href="css/shared/header.css" />
+    <link rel="stylesheet" type="text/css" href="css/shared/footer.css" />
+    <link rel="stylesheet" type="text/css" href="css/shared/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/shared/global.css" />
+    <link rel="stylesheet" type="text/css" href="css/shared/print.css" />
+    <script defer src="./js/responsive.js"></script>
+    <script defer src="./js/scroll-to-top.js"></script>
+    <script defer src="./js/modals.js"></script>
+  </head>
+  <body>
+    <header aria-label="Top Header">
+      <div class="header-top-container">
+        <div class="header-top-content">
+          <a href="./index.html" class="logo-area" aria-label="Home">
+            <img src="./img/svg/logo-white.svg" alt="etheoo logo" />
+            <h1 aria-label="Portfolio">
+              Portfol<span class="highlight-text">i/o</span>
+            </h1>
+          </a>
+          <nav class="desktop-nav" aria-label="Navigation">
+            <ul>
+              <li>
+                <a href="#om-mig">Om mig</a>
+              </li>
+              <li>
+                <a href="#tidigare-projekt">Projekt</a>
+              </li>
+              <li>
+                <a href="#cv">CV</a>
+              </li>
+              <li>
+                <a href="#kontakt">Kontakt</a>
+              </li>
+            </ul>
+          </nav>
+          <button
+            class="toggle-mobile-menu-btn"
+            onclick="toggleMobileNav()"
+            aria-label="Toggle Navigation"
+            aria-expanded="false"
+            aria-controls="mobile-nav"
+          >
+            <i class="hamburger-icon fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+      <div class="mobile-menu-container">
+        <div class="mobile-menu-content">
+          <nav id="mobile-nav" class="mobile-nav" aria-label="Navigation">
+            <ul>
+              <li>
+                <a href="#om-mig">Om mig</a>
+              </li>
+              <li>
+                <a href="#tidigare-projekt">Projekt</a>
+              </li>
+              <li>
+                <a href="#cv">CV</a>
+              </li>
+              <li>
+                <a href="#kontakt">Kontakt</a>
+              </li>
+            </ul>
+          </nav>
+          <button
+            class="mobile-menu-close-btn"
+            onclick="toggleMobileNav()"
+            aria-label="Collapse Navigation"
+          >
+            <i class="fa-solid fa-xmark"></i>
+            <span>Stäng</span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main id="main" aria-label="Main Content">
+      <div class="hero-container">
+        <img
+          class="hero-image"
+          src="./img/photos/hero.webp"
+          alt="Ett fotografi av Theodor Hägg"
+        />
+        <section class="section-content hero-content">
+          <h2>
+            Hej, mitt namn är<br /><span class="name-span"
+              >Theodor <span class="highlight-text">Hägg</span></span
+            ><br />Jag är en systemutvecklare
+          </h2>
+        </section>
+      </div>
+
+      <div id="om-mig" class="section-container about-section">
+        <section class="section-content about-content">
+          <h2 class="section-header" aria-label="Om mig">Om mig</h2>
+          <div class="about-container">
+            <div class="about-item portrait-item">
+              <img
+                class="portrait"
+                src="./img/photos/portrait-1.webp"
+                alt="Ett porträtt av Theodor Hägg"
+              />
+            </div>
+            <article class="about-item">
+              <h3>Passionerad Problemlösare</h3>
+              <p>
+                Jag är en systemutvecklare med kompetens inom Frontend och
+                Backend.
+              </p>
+              <p>
+                I mitt dagliga arbete strävar jag inte bara efter att lösa
+                problem, utan att leverera smarta, användarvänliga och effektiva
+                lösningar med hög precision för att leva upp till efterfrågan
+                från vårt digitala samhälle.
+              </p>
+              <p>
+                Med min passion för systemuveckling strävar jag efter att
+                utveckla mina färdigheter tillsammans med liksinnade för att
+                nyttja kamratskap och ta lärdom av varandras erfarenheter.
+              </p>
+            </article>
+          </div>
+        </section>
+      </div>
+
+      <div id="tidigare-projekt" class="section-container">
+        <section class="section-content projects-content">
+          <h2 class="section-header" aria-label="Tidigare projekt">
+            Tidigare projekt
+          </h2>
+          <div class="projects-container">
+            <div class="projects-item">
+              <div class="icon-container">
+                <i class="fa-solid fa-school"></i>
+              </div>
+              <h3>Skolledningssystem</h3>
+              <p>
+                Ett enklare skolledningssystem för betygsättning, tilldeling av
+                kurser, registrering av nya elever och översikt kring intressant
+                statistik.
+              </p>
+              <button class="project-btn" onclick="openSchoolSystemModal()">
+                Läs mer
+              </button>
+            </div>
+            <div class="projects-item">
+              <div class="icon-container">
+                <i class="fa-solid fa-piggy-bank"></i>
+              </div>
+              <h3>Banksystem</h3>
+              <p>
+                Ett grupprojekt där målet var att utveckla ett banksystem för
+                att tillåta överföringar av pengar mellan diverse aktörer. Jag
+                hade rollen som arkitekt.
+              </p>
+              <button class="project-btn" onclick="openBankSystemModal()">
+                Läs mer
+              </button>
+            </div>
+            <div class="projects-item">
+              <div class="icon-container">
+                <i class="fa-solid fa-film"></i>
+              </div>
+              <h3>Webbplats åt en biograf</h3>
+              <p>
+                En webbplats åt en fiktiv biograf med spännande funktionalitet
+                som inloggningssystem, bokningssystem och Content Management
+                System (CMS).
+              </p>
+              <button class="project-btn" onclick="openCinemaWebsiteModal()">
+                Läs mer
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div id="cv" class="section-container cv-container">
+        <div class="section-content cv-content">
+          <article>
+            <h2 class="section-header">Cv</h2>
+            <div class="main-article">
+              <div class="article-right">
+                <p>
+                  Erfaren och passionerad IT-entusiast med en bred kompetens
+                  inom programmering och systemutveckling. Erfarenhet omfattar
+                  både Frontend och Backend, systemarkitektur,
+                  databasmodellering samt säkerhet och sekretess. Stark teknisk
+                  kompetens kombinerat med engagemang för att hålla sig
+                  uppdaterad med de senaste trenderna inom IT-branschen.
+                </p>
+                <h3 class="cv-header">Utbildning</h3>
+                <ul class="cv-education-list cv-list">
+                  <li>NTI Gymnasiet</li>
+                  <li>Teknikprogrammet</li>
+                  <li>Sundsvall</li>
+                  <li>2014-2017</li>
+                </ul>
+                <ul class="cv-education-list cv-list">
+                  <li>Vuxenutbildning</li>
+                  <li>Naturvetenskap och teknik</li>
+                  <li>Sundsvall</li>
+                  <li>2019-2023</li>
+                </ul>
+                <ul class="cv-education-list cv-list">
+                  <li>Edugrade</li>
+                  <li>Systemutvecklare.NET med AI-kompetens</li>
+                  <li>Sundsvall</li>
+                  <li>2023-2025</li>
+                </ul>
+                <h3 class="cv-header">Arbetserfarenhet</h3>
+                <ul class="cv-work-list cv-list">
+                  <li>Bauhaus</li>
+                  <li>Birsta - Sundsvall</li>
+                  <li>2018-2019</li>
+                </ul>
+                <p>
+                  Som logistikmedarbetare åt ett av Europas största
+                  byggvaruhus-kedjor, ansvarade jag för produkten. Från att den
+                  mottogs från leverantör, tills att den nådde fram till kunden.
+                  Det var ett spännande arbete i lära; Att förstå hur
+                  logistikens betydelse och hur det motsvarar hjärtat i ett
+                  varuhus.
+                </p>
+              </div>
+              <aside class="article-left">
+                <img
+                  class="cv-portrait"
+                  src="./img/photos/portrait-2.webp"
+                  alt="Ett porträtt av Theodor Hägg"
+                />
+                <address>
+                  <ul class="cv-contact-list">
+                    <li>
+                      <a href="mailto:theodor.hagg@outlook.com">
+                        <i class="fa-solid fa-envelope"></i>
+                        theodor.hagg@outlook.com</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://www.linkedin.com/in/etheoo/"
+                        ><i class="fa-brands fa-linkedin"></i> LinkedIn</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.google.com/maps/place/Sundsvall/data=!4m2!3m1!1s0x4664674c9dc6761f:0x683f9bac9f166120"
+                        ><i class="fa-solid fa-location-dot"></i> Sundsvall,
+                        Sverige</a
+                      >
+                    </li>
+                  </ul>
+                </address>
+                <h3 class="cv-header">Språk</h3>
+                <ul>
+                  <li>Svenska - Flytande</li>
+                  <li>Engelska - Flytande</li>
+                </ul>
+                <h3 class="cv-header">Övrigt</h3>
+                <ul>
+                  <li>B-körkort</li>
+                </ul>
+              </aside>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div id="kontakt" class="section-container about-container">
+        <section class="section-content hire-me-content">
+          <h2>Söker du en ny medarbetare?</h2>
+          <a href="mailto:theodor.hagg@outlook.com" class="hire-me-btn"
+            >Kontakta mig</a
+          >
+        </section>
+      </div>
+
+      <div class="section-container">
+        <section class="section-content stack-content">
+          <h2 class="section-header">Några av mina erfarenheter</h2>
+          <div class="stack-container">
+            <img class="stack-icon" src="./img/svg/git.svg" alt="Git logotyp" />
+            <img
+              class="stack-icon"
+              src="./img/svg/github.svg"
+              alt="GitHub logotyp"
+            />
+            <img
+              class="stack-icon"
+              src="./img/svg/dotnet.svg"
+              alt="Dotnet logotyp"
+            />
+            <img
+              class="stack-icon"
+              src="./img/svg/c-sharp.svg"
+              alt="C-sharp logotyp"
+            />
+            <img
+              class="stack-icon"
+              src="./img/svg/visual-studio.svg"
+              alt="Visual Studio logotyp"
+            />
+            <img
+              class="stack-icon"
+              src="./img/svg/visual-studio-code.svg"
+              alt="Visual Studio Code logotyp"
+            />
+            <img
+              class="stack-icon"
+              src="./img/svg/rider.svg"
+              alt="Jetbrains Rider logotyp"
+            />
+            <img
+              class="stack-icon"
+              src="./img/svg/datagrip.svg"
+              alt="Jetbrains Datagrip logotyp"
+            />
+            <img
+              class="stack-icon"
+              src="./img/svg/phpstorm.svg"
+              alt="Jetbrains PhpStorm logotyp"
+            />
+            <img
+              class="stack-icon"
+              src="./img/svg/sql-server.svg"
+              alt="SQL-Server logotyp"
+            />
+            <img
+              class="stack-icon"
+              src="./img/svg/mysql.svg"
+              alt="MySQL logotyp"
+            />
+            <img class="stack-icon" src="./img/svg/php.svg" alt="PHP logotyp" />
+            <img
+              class="stack-icon"
+              src="./img/svg/apache.svg"
+              alt="Apache logotyp"
+            />
+            <img
+              class="stack-icon"
+              src="./img/svg/wordpress.svg"
+              alt="Wordpress logotyp"
+            />
+            <img
+              class="stack-icon"
+              src="./img/svg/html.svg"
+              alt="HTML logotyp"
+            />
+            <img class="stack-icon" src="./img/svg/css.svg" alt="CSS logotyp" />
+            <img
+              class="stack-icon"
+              src="./img/svg/bash.svg"
+              alt="Bash logotyp"
+            />
+            <img
+              class="stack-icon"
+              src="./img/svg/linux.svg"
+              alt="Linux logotyp"
+            />
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer aria-label="Bottom Footer">
+      <div class="footer-container">
+        <div class="footer-content">
+          <div class="footer-item">
+            <h2 class="footer-item-desktop-header">Meny</h2>
+            <button
+              class="toggle-mobile-footer-menu-btn"
+              onclick="toggleMobileFooterNav()"
+              aria-label="Toggle Navigation"
+              aria-expanded="false"
+              aria-controls="footer-nav"
+            >
+              <span>Meny</span
+              ><i class="footer-toggle-icon fa-solid fa-plus"></i>
+            </button>
+            <nav id="footer-nav" class="footer-nav" aria-label="Navigation">
+              <ul>
+                <li>
+                  <a href="#om-mig">Om mig</a>
+                </li>
+                <li>
+                  <a href="#tidigare-projekt">Projekt</a>
+                </li>
+                <li>
+                  <a href="#cv">CV</a>
+                </li>
+                <li>
+                  <a href="#kontakt">Kontakt</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="socials-area footer-item">
+            <h2>Följ mig!</h2>
+            <ul aria-label="Social Media Links">
+              <li>
+                <a href="https://github.com/etheoo98" aria-label="GitHub">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/etheoo" aria-label="LinkedIn">
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/etheoo" aria-label="X/Twitter">
+                  <i class="fa-brands fa-x-twitter"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom-container">
+        <div class="footer-bottom-content">
+          <span>© Theodor Hägg 2024</span>
+        </div>
+      </div>
+    </footer>
+    <button
+      class="scroll-to-top-btn"
+      onclick="ScrollToTop()"
+      aria-label="Scroll to top button"
+    >
+      <i class="fa-solid fa-angle-up"></i>
+    </button>
+    <div class="modal-container">
+      <article class="school-system-modal modal-content" aria-hidden="true">
+        <header>
+          <h2 aria-label="Skolledningssystem">
+            Skollednings<span class="highlight-text">system</span>
+          </h2>
+          <button onclick="closeSchoolSystemModal()">
+            <i class="modal-close-btn fa-solid fa-xmark"></i>
+          </button>
+        </header>
+        <div class="main-article">
+          <figure>
+            <img
+              src="./img/ss/school-project-1.webp"
+              alt="Skrämdump av applikationens huvudmeny."
+            />
+            <figcaption>Bilden visar huvudmenyn.</figcaption>
+          </figure>
+          <p>
+            I kursen Programmering av databaser och SQL, gick slutprojektet ut
+            på att man skulle utveckla ett skolledningssystem. Detta system
+            skulle bestå av en applikation som är kopplad till en SQL-databas
+            som lagrar information som personal, elever, kurser m.m. I
+            applikationen ska administratörer kunna se statistik bland den
+            lagrade datan, samt kunna manipulera data utifrån kursmålen.
+          </p>
+          <p>
+            Efter att ha övervägt vilken typ av databas jag ville använda mig
+            av, beslöt jag att använda en SQLite-databas då jag ville enkelt
+            kunna dela mitt projekt så att andra kan testa min applikation utan
+            att behöva återskapa samma databasmodell.
+          </p>
+          <p>
+            Användargränsnittet är byggt med
+            <a href="https://spectreconsole.net/">Spectre Console</a>, vilket
+            bidrog till att processen blev väldigt smidig. Användaren kan enkelt
+            välja alternativ från menyn genom att navigera med piltangenterna
+            och klicka på Enter för att bekräfta sitt val.
+          </p>
+          <figure>
+            <img
+              src="./img/ss/school-project-2.webp"
+              alt="Skrämdump av en tabell i applikation"
+            />
+            <figcaption>Bilden visar aktiva kurser.</figcaption>
+          </figure>
+          <p>
+            För att utföra CRUD-operationer mot databasen, använde jag Entity
+            Framework. Detta efter att jag gjort en scaffold av databasen och
+            lagrat tabellerna som objekt i applikationen.
+          </p>
+          <p>
+            För att presentera hämtad data på ett snyggt sätt, mappar jag den
+            till en DTO för att förbereda objektet för utskrift.
+          </p>
+          <figure>
+            <img
+              src="./img/ss/school-project-3.webp"
+              alt="Skrämdump som visar alternativ för att lägga till en ny elev."
+            />
+            <figcaption>
+              Bilden visar alternativ för att lägga till en ny elev.
+            </figcaption>
+          </figure>
+          <p>
+            Utöver att hämta data från databasen, går det att lägga till ny data
+            i form av nya elever och lärare. Det går även att betygsätta elever
+            när dem gått klart en kurs.
+          </p>
+        </div>
+      </article>
+
+      <article class="bank-system-modal modal-content" aria-hidden="true">
+        <header>
+          <h2 aria-label="Banksystem">
+            Bank<span class="highlight-text">system</span>
+          </h2>
+          <button onclick="closeBankSystemModal()">
+            <i class="modal-close-btn fa-solid fa-xmark"></i>
+          </button>
+        </header>
+        <div class="main-article">
+          <figure>
+            <img
+              src="./img/ss/bank-project-1.webp"
+              alt="Skrämdump av applikationens huvudmeny."
+            />
+            <figcaption>
+              Bilden visar ett diagram för designmönstret MVP.
+            </figcaption>
+          </figure>
+          <p>
+            Som sista uppgift i kursen Objektorienterad programmering med C# och
+            .NET, skulle vi utföra ett grupprojekt över en kortare period.
+            Projektet gick ut på att utveckla ett banksystem där man skulle
+            kunna logga in på olika konton och göra överföringar till varrandra,
+            med mera.
+          </p>
+          <p>
+            Eftersom jag jobbat mycket med databaser tidigare, blev det väldigt
+            enkelt att förstå hur man skulle kunna strukturera projektet och
+            jobba utifrån en In-Memory-databas. Denna databas fick vara en klass
+            med generiska samlingar som egenskaper. För att hämta data från
+            denna databas kan man då härma hur CRUD-operationer med Entity
+            Framework går till, bara att man gör det mot en generisk samling som
+            till exempel en List.
+          </p>
+          <p>
+            Då jag hade höga ambitioner inför denna uppgift, var min förhoppning
+            att arbetet skulle bedrivas undan större hinder. Men sådan var inte
+            fallet. Min grupp hade bristande kommunkiation vilket ledde till ett
+            oavslutat arbete.
+          </p>
+          <p>
+            Detta berodde delvis på att vi inte hade påbörjat kursen
+            Projektledning med Agila metoder och förstått betydelsen av god
+            kommunikation i dessa sammanhang. Det berodde även på att ingen i
+            gruppen utfört ett grupprojekt inom programmering tidigare.
+          </p>
+          <p>
+            I vilket fall var grupparbetet en intressant upplevelse, och en god
+            läxa i att förstå kommunikationens betydelse inom grupper.
+            Personligen blev jag glatt överskad av att min tes kring
+            arkitekturen stämmde, även om jag önskat att vi avslutat arbetet med
+            all funktionalitet.
+          </p>
+        </div>
+      </article>
+
+      <article class="cinema-website-modal modal-content" aria-hidden="true">
+        <header>
+          <h2 aria-label="Webbplats åt en biograf">
+            Webbplats åt<span class="highlight-text"> en biograf</span>
+          </h2>
+          <button onclick="closeCinemaWebsiteModal()">
+            <i class="modal-close-btn fa-solid fa-xmark"></i>
+          </button>
+        </header>
+        <div class="main-article">
+          <figure>
+            <img
+              src="./img/ss/cinema-project-1.webp"
+              alt="Skrämdump av applikationens huvudmeny."
+            />
+            <figcaption>
+              Bilden visar startsidan som består av ett bildspel.
+            </figcaption>
+          </figure>
+          <p>
+            När jag studerade på Vuxenutbildning Sundsvall, läste jag den
+            insiktsfulla kursen Webbserverprogrammering 2. Hela kursen gick ut
+            på att utveckla en hemsida åt en biograf där deras kunder kan skapa
+            konton och boka biljetter till diverse filmer. Administratörer kan
+            även använda ett Content Management System för att moderera innehåll
+            och användare.
+          </p>
+          <figure>
+            <img
+              src="./img/ss/cinema-project-2.webp"
+              alt="Skrämdump av applikationens huvudmeny."
+            />
+            <figcaption>Bilden visar filmer utifån ett sökresultat.</figcaption>
+          </figure>
+          <p>
+            Innan jag påbörjade denna kurs var jag väldigt intresserad av
+            Frontend-utveckling. Jag hade tidigare bara jobbat med statiska
+            sidor, och när jag lärde mig att använda en databas för att bygga
+            dynamiska hemsidor, tyckte jag att det var så pass roligt att jag
+            bestämde mig för att byta inriktning till fullstack.
+          </p>
+          <figure>
+            <img
+              src="./img/ss/cinema-project-3.webp"
+              alt="Skrämdump av applikationens huvudmeny."
+            />
+            <figcaption>Bilden visar produktsidan för en film.</figcaption>
+          </figure>
+        </div>
+      </article>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+@media print {
+  .header-top-content {
+    padding-right: 0;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .toggle-mobile-menu-btn {
+    display: block;
+  }
+
+  .section-container {
+    page-break-before: always;
+    page-break-inside: avoid;
+  }
+
+  .about-container {
+    page-break-before: auto;
+  }
+
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  footer {
+    display: none;
+  }
+
+  .scroll-to-top-btn {
+    display: none;
+  }
+}
