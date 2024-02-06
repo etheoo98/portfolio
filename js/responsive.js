@@ -1,9 +1,9 @@
-var mobileMenuContainer = document.querySelector(".mobile-menu-container");
-var footerNav = document.querySelector(".footer-nav");
-var hamburgerIcon = document.querySelector(".hamburger-icon");
-var mobileNavToggleButton = document.querySelector(".toggle-mobile-menu-btn");
-var footerToggleIcon = document.querySelector(".footer-toggle-icon");
-var footerNavToggleButton = document.querySelector(
+let mobileMenuContainer = document.querySelector(".mobile-menu-container");
+let footerNav = document.querySelector(".footer-nav");
+let hamburgerIcon = document.querySelector(".hamburger-icon");
+let mobileNavToggleButton = document.querySelector(".toggle-mobile-menu-btn");
+let footerToggleIcon = document.querySelector(".footer-toggle-icon");
+let footerNavToggleButton = document.querySelector(
   ".toggle-mobile-footer-menu-btn"
 );
 

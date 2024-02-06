@@ -1,7 +1,7 @@
-var modalContainer = document.querySelector(".modal-container");
-var schoolModal = document.querySelector(".school-system-modal");
-var bankModal = document.querySelector(".bank-system-modal");
-var cinemaModal = document.querySelector(".cinema-website-modal");
+let modalContainer = document.querySelector(".modal-container");
+let schoolModal = document.querySelector(".school-system-modal");
+let bankModal = document.querySelector(".bank-system-modal");
+let cinemaModal = document.querySelector(".cinema-website-modal");
 
 function openSchoolSystemModal() {
   modalContainer.classList.add("show");
@@ -39,4 +39,3 @@ function closeCinemaWebsiteModal() {
   cinemaModal.classList.remove("show");
   cinemaModal.setAttribute("aria-hidden", "true");
 }
-
